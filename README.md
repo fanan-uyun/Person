@@ -1,0 +1,21 @@
+# Django数据库sqlite操作,以用户信息表为例
+1.定义模型类，同步数据库<br>
+&emsp;相关文件models.py
+<br>
+&emsp;大致流程都是：创建页面--创建视图函数--指定路由
+<br>
+<br>
+2.添加用户<br>
+&emsp;相关文件add_person.html;views.py;urls.py
+<br>
+<br>
+3.展示用户信息<br>
+&emsp;相关文件all_person.html;views.py;urls.py
+<br>
+<br>
+4.删除用户<br>
+&emsp;相关文件all_person.html;views.py;urls.py
+<br>
+<br>
+5.修改用户信息<br>
+&emsp;相关文件update_person.html;views.py;urls.py

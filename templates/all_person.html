@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>展示用户信息</title>
+    </head>
+    <body>
+        <h3>用户信息展示</h3>
+        <table border="1" cellspacing="0" style="text-align: center;">
+            <tr>
+                <td>序号</td>
+                <td>id</td>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>身高</td>
+                <td>体重</td>
+                <td>生日</td>
+                <td>操作</td>
+            </tr>
+            “{% for person_obj in person_obj_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ person_obj.id }}</td>
+                    <td>{{ person_obj.name }}</td>
+                    <td>{{ person_obj.age }}</td>
+                    <td>{{ person_obj.height }}</td>
+                    <td>{{ person_obj.weight }}</td>
+                    <td>{{ person_obj.birthday | date:'Y-m-d'}}</td>
+                    <td>
+                        <a href="/add_person">添加</a>
+                        <a href="/delete_person/?id={{ person_obj.id }}">删除</a>
+                        <a href="/update_person/?id={{ person_obj.id }}">修改</a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+</html>
