@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,redirect
 from App1 import models
 # Create your views here.
 
@@ -73,7 +73,7 @@ def update_person(request):
         person_obj.weight = weight
         person_obj.birthday = birthday
         person_obj.save() # 保存修改，提交数据库
-
+        return redirect("/all_person/")
 
         # models.Person.objects.update(
         #     name = request.POST.get('username'),
@@ -82,6 +82,6 @@ def update_person(request):
         #     weight= request.POST.get('weight'),
         #     birthday=request.POST.get('birthday')
         # )
-        return redirect("/all_person/")
+        # return redirect("/all_person/")
 
 
